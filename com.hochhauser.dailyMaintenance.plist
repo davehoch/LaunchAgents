@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" http://www.apple.com/DTDs/PropertyList-1.0.dtd>
+<plist version="1.0">
+    <dict>
+        <!--
+            cp ./com.hochhauser.dailyMaintenance.plist ~/Library/LaunchAgents/
+
+            launchctl load ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
+            launchctl unload ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
+        -->
+ 
+        <key>Label</key>
+        <string>com.dhochhauser.dailymaintenance</string>
+       
+        <key>Program</key>
+        <string>/Users/dave/bin_home/dailyMaintenance</string>
+ 
+        <key>StandardInPath</key>
+        <string>/tmp/dailyMaintenance.stdin</string>
+       
+        <key>StandardOutPath</key>
+        <string>/tmp/dailyMaintenance.stdout</string>
+       
+        <key>StandardErrorPath</key>
+        <string>/tmp/dailyMaintenance.stderr</string>
+       
+        <!-- Run daily at 9:00am or whenever the computer wakes up after that -->
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Hour</key>
+            <integer>9</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </dict>
+</plist>
