@@ -16,13 +16,13 @@
         <string>/Users/dave/bin_home/dailyMaintenance</string>
  
         <key>StandardInPath</key>
-        <string>/tmp/dailyMaintenance.stdin</string>
+        <string>/var/log/dailyMaintenance.stdin</string>
        
         <key>StandardOutPath</key>
-        <string>/tmp/dailyMaintenance.stdout</string>
+        <string>/var/log/dailyMaintenance.stdout</string>
        
         <key>StandardErrorPath</key>
-        <string>/tmp/dailyMaintenance.stderr</string>
+        <string>/var/log/dailyMaintenance.stderr</string>
        
         <!-- Run daily at 9:00am or whenever the computer wakes up after that -->
         <key>StartCalendarInterval</key>
