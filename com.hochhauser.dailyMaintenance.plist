@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" http://www.apple.com/DTDs/PropertyList-1.0.dtd>
 <plist version="1.0">
-    <dict>
-        <!--
-            cp ./com.hochhauser.dailyMaintenance.plist ~/Library/LaunchAgents/
+    <!--
+        cp ./com.hochhauser.dailyMaintenance.plist ~/Library/LaunchAgents/
 
-            launchctl load ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
-            launchctl unload ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
-        -->
- 
+        launchctl load ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
+        launchctl unload ~/Library/LaunchAgents/com.hochhauser.dailyMaintenance.plist
+        launchctl start com.dhochhauser.dailymaintenance
+    -->
+    <dict>
         <key>Label</key>
         <string>com.dhochhauser.dailymaintenance</string>
        
         <key>Program</key>
         <string>/Users/dave/bin_home/dailyMaintenance</string>
- 
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin</string>
+        </dict>
+        
         <key>StandardInPath</key>
         <string>/var/log/dailyMaintenance.stdin</string>
        
